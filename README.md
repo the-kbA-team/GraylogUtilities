@@ -1,0 +1,2 @@
+# GraylogUtilities
+Utilities for logging
