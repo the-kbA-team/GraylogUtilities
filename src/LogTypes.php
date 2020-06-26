@@ -32,14 +32,12 @@ class LogTypes
 
     /**
      * LogTypes constructor.
-     * @param array|null $types
+     * @param array $types
      */
-    public function __construct($types = null)
+    public function __construct(array $types = [])
     {
-        if (is_array($types)) {
-            foreach ($types as $type) {
-                $this->add($type);
-            }
+        foreach ($types as $type) {
+            $this->add($type);
         }
     }
 
@@ -47,7 +45,7 @@ class LogTypes
      * Add PSR-3 log type.
      * @param string $type PSR-3 log type
      */
-    public function add($type)
+    public function add(string $type): void
     {
         /**
          * Don't add in case of an invalid type or in case the type has already
@@ -66,7 +64,7 @@ class LogTypes
      * default behavior for logging.
      * @return array
      */
-    public function get()
+    public function get(): array
     {
         if ($this->types === []) {
             return self::$allowedTypes;

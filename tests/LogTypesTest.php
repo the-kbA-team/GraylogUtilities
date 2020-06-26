@@ -29,7 +29,7 @@ class LogTypesTest extends TestCase
     /**
      * Assert that an empty instance of log types results in all log types being returned.
      */
-    public function testEmptyLogTypes()
+    public function testEmptyLogTypes(): void
     {
         $types = new LogTypes();
         static::assertSame(self::$allLogtypes, $types->get());
@@ -39,7 +39,7 @@ class LogTypesTest extends TestCase
      * Test that adding the same log level twice will return only the log level
      * only once.
      */
-    public function testDuplicateLogTypes()
+    public function testDuplicateLogTypes(): void
     {
         $types = new LogTypes([LogLevel::ALERT]);
         $types->add(LogLevel::ALERT);
@@ -50,7 +50,7 @@ class LogTypesTest extends TestCase
      * Data provider for invalid log levels/types.
      * @return array
      */
-    public static function provideInvalidTypes()
+    public static function provideInvalidTypes(): array
     {
         return [
             ['1'],
@@ -64,7 +64,7 @@ class LogTypesTest extends TestCase
      * @param string $loglevel
      * @dataProvider provideInvalidTypes
      */
-    public function testInvalidTypes($loglevel)
+    public function testInvalidTypes(string $loglevel): void
     {
         $types = new LogTypes([LogLevel::ALERT]);
         $types->add($loglevel);

@@ -21,24 +21,22 @@ class Obfuscator
 
     /**
      * Obfuscator constructor.
-     * @param array|null $keys Keys to obfuscate.
+     * @param array $keys Keys to obfuscate.
      */
-    public function __construct(array $keys = null)
+    public function __construct(array $keys = [])
     {
-        if (is_array($keys)) {
-            foreach ($keys as $key) {
-                $this->addKey($key);
-            }
+        foreach ($keys as $key) {
+            $this->addKey($key);
         }
     }
 
     /**
      * Add a key to the list of keys to obfuscate in an array.
-     * @param string|int $key
+     * @param string $key
      */
-    public function addKey($key)
+    public function addKey(string $key): void
     {
-        if ((is_string($key) || is_int($key)) && !in_array($key, $this->keys, true)) {
+        if (!in_array($key, $this->keys, true)) {
             $this->keys[] = strtolower($key);
         }
     }
@@ -47,11 +45,9 @@ class Obfuscator
      * Define the obfuscation string to use.
      * @param string $obfuscationString
      */
-    public function setObfuscationString($obfuscationString)
+    public function setObfuscationString(string $obfuscationString): void
     {
-        if (is_string($obfuscationString)) {
-            $this->obfuscationString = $obfuscationString;
-        }
+        $this->obfuscationString = $obfuscationString;
     }
 
     /**
@@ -60,7 +56,7 @@ class Obfuscator
      * @param array $array
      * @return array
      */
-    public function obfuscate(array $array)
+    public function obfuscate(array $array): array
     {
         if ($this->keys === []) {
             return $array;

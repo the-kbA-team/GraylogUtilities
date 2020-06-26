@@ -7,7 +7,7 @@
         convertWarningsToExceptions="true"
         stopOnError="false"
         stopOnFailure="false"
-        syntaxCheck="true"
+        cacheResult="false"
 >
     <testsuites>
         <testsuite name="Graylog utilities tests">

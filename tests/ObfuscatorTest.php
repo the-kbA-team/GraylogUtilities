@@ -5,12 +5,16 @@ namespace Tests\kbATeam\GraylogUtilities;
 use PHPUnit\Framework\TestCase;
 use kbATeam\GraylogUtilities\Obfuscator;
 
+/**
+ * Class ObfuscatorTest
+ * @package Tests\kbATeam\GraylogUtilities
+ */
 class ObfuscatorTest extends TestCase
 {
     /**
      * Test obfuscation without keys to obfuscate.
      */
-    public function testEmptyObfuscation()
+    public function testEmptyObfuscation(): void
     {
         $obfuscator = new Obfuscator();
         $data = [
@@ -23,7 +27,7 @@ class ObfuscatorTest extends TestCase
     /**
      * Test simple password obfuscation.
      */
-    public function testSimplePasswordObfuscation()
+    public function testSimplePasswordObfuscation(): void
     {
         $obfuscator = new Obfuscator(['password', 'passwd']);
         $data = [
@@ -46,7 +50,7 @@ class ObfuscatorTest extends TestCase
     /**
      * Test setting an alternate obfuscation string.
      */
-    public function testAlternateObfuscationString()
+    public function testAlternateObfuscationString(): void
     {
         $obfuscator = new Obfuscator();
         $obfuscator->addKey('password');
