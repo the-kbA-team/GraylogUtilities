@@ -45,6 +45,7 @@ jobs:
       - uses: php-actions/phpunit@v3
         with:
           php_version: ${{ matrix.php_version }}
+          vendored_phpunit_path: vendor/phpunit/phpunit/phpunit
           configuration: phpunit.xml
           bootstrap: vendor/autoload.php
           coverage_clover: clover.xml
