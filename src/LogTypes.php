@@ -12,7 +12,7 @@ use Psr\Log\LogLevel;
 class LogTypes
 {
     /**
-     * @var array Array of allowed log level types.
+     * @var array<int, string> Array of allowed log level types.
      */
     private static $allowedTypes = [
         LogLevel::EMERGENCY,
@@ -26,13 +26,14 @@ class LogTypes
     ];
 
     /**
-     * @var array
+     * @var array<int, string>
      */
     private $types = [];
 
     /**
      * LogTypes constructor.
-     * @param array $types
+     * @param array<int, string> $types
+     * @return void
      */
     public function __construct(array $types = [])
     {
@@ -62,7 +63,7 @@ class LogTypes
      * Get all configured PSR-3 log types.
      * Returns all possible log types in case none were defined. This is the
      * default behavior for logging.
-     * @return array
+     * @return array<int, string>
      */
     public function get(): array
     {
