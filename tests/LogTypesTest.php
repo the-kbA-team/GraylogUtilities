@@ -13,7 +13,7 @@ use Psr\Log\LogLevel;
 class LogTypesTest extends TestCase
 {
     /**
-     * @var array Array of allowed log level types.
+     * @var array<int, string> Array of allowed log level types.
      */
     private static $allLogtypes = [
         LogLevel::EMERGENCY,
@@ -48,7 +48,7 @@ class LogTypesTest extends TestCase
 
     /**
      * Data provider for invalid log levels/types.
-     * @return array
+     * @return array<mixed>
      */
     public static function provideInvalidTypes(): array
     {

@@ -10,7 +10,7 @@ namespace kbATeam\GraylogUtilities;
 class Obfuscator
 {
     /**
-     * @var array Keys to obfuscate.
+     * @var array<int, string> Keys to obfuscate.
      */
     private $keys = [];
 
@@ -21,7 +21,7 @@ class Obfuscator
 
     /**
      * Obfuscator constructor.
-     * @param array $keys Keys to obfuscate.
+     * @param array<int, string> $keys Keys to obfuscate.
      */
     public function __construct(array $keys = [])
     {
@@ -53,8 +53,8 @@ class Obfuscator
     /**
      * Obfuscate the contents of the previously defined keys in the given array
      * with the previously defined string.
-     * @param array $array
-     * @return array
+     * @param array<mixed> $array
+     * @return array<mixed>
      */
     public function obfuscate(array $array): array
     {
