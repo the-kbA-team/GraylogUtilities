@@ -2,7 +2,7 @@
 
 [![License: MIT][license-mit]](LICENSE)
 [![Packagist Version][packagist-badge]][packagist]
-[![Build Status][build-status-master]][travis-ci]
+[![GitHub branch check runs]][github-actions]
 [![Maintainability][maintainability-badge]][maintainability]
 [![Test Coverage][coverage-badge]][coverage]
 
@@ -56,8 +56,8 @@ array(2) {
 [license-mit]: https://img.shields.io/badge/license-MIT-blue.svg
 [packagist-badge]: https://img.shields.io/packagist/v/kba-team/graylog-utilities
 [packagist]: https://packagist.org/packages/kba-team/graylog-utilities
-[travis-ci]: https://travis-ci.org/the-kbA-team/GraylogUtilities
-[build-status-master]: https://api.travis-ci.org/the-kbA-team/GraylogUtilities.svg?branch=master
+[GitHub branch check runs]: https://img.shields.io/github/check-runs/the-kbA-team/GraylogUtilities/main
+[github-actions]: https://github.com/the-kbA-team/GraylogUtilities/actions
 [maintainability-badge]: https://api.codeclimate.com/v1/badges/de31ab102727a0451337/maintainability
 [maintainability]: https://codeclimate.com/github/the-kbA-team/GraylogUtilities/maintainability
 [coverage-badge]: https://api.codeclimate.com/v1/badges/de31ab102727a0451337/test_coverage
