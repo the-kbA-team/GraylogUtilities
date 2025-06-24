@@ -3,8 +3,6 @@
 [![License: MIT][license-mit]](LICENSE)
 [![Packagist Version][packagist-badge]][packagist]
 [![GitHub branch check runs]][github-actions]
-[![Maintainability][maintainability-badge]][maintainability]
-[![Test Coverage][coverage-badge]][coverage]
 
 Utilities for logging.
 
@@ -58,7 +56,3 @@ array(2) {
 [packagist]: https://packagist.org/packages/kba-team/graylog-utilities
 [GitHub branch check runs]: https://img.shields.io/github/check-runs/the-kbA-team/GraylogUtilities/main
 [github-actions]: https://github.com/the-kbA-team/GraylogUtilities/actions
-[maintainability-badge]: https://api.codeclimate.com/v1/badges/de31ab102727a0451337/maintainability
-[maintainability]: https://codeclimate.com/github/the-kbA-team/GraylogUtilities/maintainability
-[coverage-badge]: https://api.codeclimate.com/v1/badges/de31ab102727a0451337/test_coverage
-[coverage]: https://codeclimate.com/github/the-kbA-team/GraylogUtilities/test_coverage
