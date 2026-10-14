@@ -8,7 +8,22 @@ Utilities for logging.
 
 ## Usage
 
-`composer requrire kba-team/graylog-utilities`
+`composer require kba-team/graylog-utilities`
+
+## Development
+
+The library supports PHP 7.4 and PHP 8.0–8.4. Install dependencies for a
+specific PHP version with Docker, then run the checks using that PHP version:
+
+```sh
+make install PHP_VERSION=8.4
+make lint test analyze validate audit
+```
+
+Use `make install PHP_VERSION=7.4 DEPENDENCIES_LOWEST=1` to check the lowest
+allowed dependency versions. `make clean` removes installed dependencies and
+Composer/PHPUnit artifacts. The GitHub Actions matrix runs these checks across
+the supported PHP versions.
 
 ### LogTypes
 
